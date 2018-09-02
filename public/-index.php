@@ -18,7 +18,7 @@ require 'init.php';
         <?php if (isLoggedIn()): ?>
             <p>Olá, <?php echo $_SESSION['login']; ?>. <a href="painel.php">Painel</a> | <a href="logout.php">Sair</a></p>
         <?php else: ?>
-            <p>Olá, visitante. <a href="form-login.php">Login</a></p>
+            <p>Olá, visitante. <a href="formlogin.php">Login</a></p>
         <?php endif; ?>
  
     </body>
