@@ -1,6 +1,6 @@
 <header>
     <ul>
-        <li id="home">Library</li>
-        <li id="login">Login</li>
+        <li id="home"><a href="index.php">Library</a></li>
+        
     </ul>
 </header>
