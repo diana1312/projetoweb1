@@ -7,9 +7,14 @@
     
     try{
         //CAMPO BUSCAR
+        if(isset($_GET["livro"])) {
+            $stmt = $conexao->prepare("select * from livro where titulo like '%{$_GET["livro"]}%' ");
+            $stmt->execute();
+            $resultado = $stmt->fetchALL(PDO::FETCH_ASSOC);
+        }else {
             $resultado = $conexao->query("select id_livro, titulo, autor, editora,ano_publicacao from livro ");
-            
-    
+        }
+
     }catch (PDOEception $e){
         echo $e->getMessage();
         echo $e->getCode();
@@ -32,7 +37,7 @@
             <div id="janela_pesquisa">
                 <form action="index.php" method="get">
                     <input type="text" name="livro" placeholder="Pesquisa">
-                    <input type="image" name="pesquisa" src="assets/pesquisa.png">
+                    <input type="image" name="pesquisa" src="assets/pesquisa3.png">
                 </form>
             
             </div>
