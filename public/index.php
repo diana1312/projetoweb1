@@ -37,7 +37,7 @@
             <div id="janela_pesquisa">
                 <form action="index.php" method="get">
                     <input type="text" name="livro" placeholder="Pesquisa">
-                    <input type="image" name="pesquisa" src="assets/pesquisa3.png">
+                    <input type="image" name="pesquisa" src="assets/pesquisa4.png">
                 </form>
             
             </div>

@@ -33,6 +33,7 @@
         <link rel="shortcut icon" href="assets/icon.ico">
         
         <link rel="stylesheet" href="_css/estilo.css">
+        <link rel="stylesheet" href="_css/rud.css">
     </head>
     <body>
         <?php include("_incluir/header.php"); ?>
@@ -40,11 +41,11 @@
         <main>
             <div class="rud">
                 <form action="insercao.php" method="post">
-                    <fieldset><h3>Fonerça os dado do livro</h3>
-                        <label>Título <input type="text" name="titulo"></label>
-                        <label>Autor <input type="text" name="autor"></label>
-                        <label>Editora <input type="text" name="editora"></label>
-                        <label>Ano Publicação <input type="text" name="ano_publicacao"></label>
+                    <fieldset><h3>Adicionar novo livro</h3>
+                        <input type="text" name="titulo" placeholder="Titulo">
+                        <input type="text" name="autor" placeholder="Autor">
+                        <input type="text" name="editora" placeholder="Editora">
+                        <input type="text" name="ano_publicacao" placeholder="Ano de Publicação">
                         <input type="submit" value="Salvar">
                     </fieldset>
                 </form>
