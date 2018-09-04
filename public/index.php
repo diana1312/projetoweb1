@@ -1,5 +1,13 @@
 <?php require_once("../conexao/conexao.php"); ?>
-<?php
+<?php 
+    //CRIAR SESSÃO
+    session_start();
+
+    //PROTEGE PÁGINAS INTERNAS CASO NÃO ESTEJA LOGADO
+    if(!isset($_SESSION["user_codigo"])) {
+        header("location:login.php");
+    }
+
     // Determinar localidade BR
     setlocale(LC_ALL, 'pt_BR');
     // Faz com que o cliente recebe os dados em utf8, independente de como armazenados no banco
@@ -8,11 +16,11 @@
     try{
         //CAMPO BUSCAR
         if(isset($_GET["livro"])) {
-            $stmt = $conexao->prepare("select * from livro where titulo like '%{$_GET["livro"]}%' ");
+            $stmt = $conexao->prepare("select * from livro where titulo like '%{$_GET["livro"]}%' order by titulo asc");
             $stmt->execute();
             $resultado = $stmt->fetchALL(PDO::FETCH_ASSOC);
         }else {
-            $resultado = $conexao->query("select id_livro, titulo, autor, editora,ano_publicacao from livro ");
+            $resultado = $conexao->query("select id_livro, titulo, autor, editora,ano_publicacao from livro order by titulo asc");
         }
 
     }catch (PDOEception $e){
