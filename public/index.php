@@ -10,7 +10,7 @@
 
     // Determinar localidade BR
     setlocale(LC_ALL, 'pt_BR');
-    // Faz com que o cliente recebe os dados em utf8, independente de como armazenados no banco
+    // Faz com que o cliente recebe os dados em utf8, //independente de como armazenados no banco
     $conexao->exec("set names utf8");
     
     try{
@@ -42,12 +42,12 @@
         <?php include("_incluir/header.php"); ?>
         <?php include("_incluir/botoes.php"); ?>
         <main>
+            
             <div id="janela_pesquisa">
                 <form action="index.php" method="get">
                     <input type="text" name="livro" placeholder="Pesquisa">
                     <input type="image" name="pesquisa" src="assets/pesquisa4.png">
                 </form>
-            
             </div>
             
             <!---   Lisstando livros ---->

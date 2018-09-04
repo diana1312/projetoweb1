@@ -1,6 +1,6 @@
 <header>
     <ul>
-        <li id="home"><a href="index.php">Library</a></li>
+        <li id="home" class="header_info"><a href="index.php">Library</a></li>
         <?php if(isset($_SESSION["user_codigo"])) { 
             $stmt = $conexao->prepare("select nome from usuario where id_user = '{$_SESSION["user_codigo"]}'");
             $stmt->execute();
@@ -10,8 +10,7 @@
                 $user_nome = $linha["nome"];
             }
         ?>
-            <li>Bem vindo, <?php echo $user_nome; ?></li>
-        
+            <li class="header_info">Bem vindo, <?php echo $user_nome; ?> - <a href="logout.php">Sair</a></li>
         <?php } ?>
     </ul>
 </header>

@@ -26,16 +26,19 @@ header ul li {
     list-style-type: none;
     display: inline-block;
 }
+header ul li:nth-child(2) {
+    margin-left: 65%;
+}
 #home {
     font-size: 2.5em;
+}
+.header_info a{
+    text-decoration: none;
+    transition: color 0.5s;
     color: #885ead;
     text-shadow: 4px 1px 4px #ddd;
 }
-#home a{
-    text-decoration: none;
-    transition: color 0.5s;
-}
-#home a:hover{
+.header_info a:hover{
     color: #ffc93b;
     transition: color 0.5s;
 }
