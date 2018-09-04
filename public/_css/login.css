@@ -1,0 +1,52 @@
+/***************** Formulário de Login *******************/
+main div#janela_login {
+    width:60%;
+    margin:10% auto;
+    padding: 2%;
+    border: 3px double #ddd;
+}
+main div#janela_login form h2  {
+    font-family: sans-serif;
+    color:#C5996B;
+    text-align: center;
+    margin-top: 0px; 
+    font-size: 2em
+}
+
+main div#janela_login form p {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #F00;
+    text-align: left;
+}
+main div#janela_login form input[type="text"] {
+    width:46.3%;
+    padding:1.5%;
+    border:1px solid #CDC99B;
+    border-radius: 5px;
+    outline: none;
+}
+
+main div#janela_login form input[type="password"] {
+    width:46.3%;
+    padding:1.5%;
+    margin-top:15px;
+    border:1px solid #CDC99B;
+    border-radius: 5px;
+    outline: none;
+}
+
+main div#janela_login form input[type="submit"] {
+    display: block;
+    width: 40%;
+    padding:10px 20px;
+    margin:6% auto 0% auto;;
+    color: #FFF;
+    border:0px;
+    border-radius: 5px;
+    background-color: #C5996B;
+    outline: none;
+    cursor: pointer;
+}
+/**********************************************/
